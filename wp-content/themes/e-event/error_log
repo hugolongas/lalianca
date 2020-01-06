@@ -1,0 +1,4 @@
+[12-Sep-2019 10:36:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/lalianca/public_html/wp-content/themes/e-event/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/lalianca/public_html/wp-content/themes/e-event/index.php on line 1

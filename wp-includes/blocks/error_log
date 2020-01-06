@@ -1,0 +1,8 @@
+[14-Jun-2019 00:01:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function register_block_type() in /home/lalianca/public_html/wp-includes/blocks/block.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/lalianca/public_html/wp-includes/blocks/block.php on line 32
+[15-Jun-2019 22:19:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/lalianca/public_html/wp-includes/blocks/shortcode.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/lalianca/public_html/wp-includes/blocks/shortcode.php on line 32

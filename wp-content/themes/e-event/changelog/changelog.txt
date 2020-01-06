@@ -1,0 +1,172 @@
+Version 2.1.11 - Updated: 17.12.2018
+================================================
+Fixed : Only override admin bar link to edit a post/page if a link to classic is available
+
+Version 2.1.10 - Updated: 21.11.2018
+================================================
+Updated Visual Composer for Gutenberg compatibility
+
+Version 2.1.9 - Updated: 19.07.2018
+================================================
+Added	:	General Tweaks
+
+Version 2.1.8 - Updated: 17.01.2018
+================================================
+Added	:	General Tweaks
+
+Version 2.1.7 - Updated: 17.11.2017
+================================================
+Added	:	General Tweaks
+
+Version 2.1.6 - Updated: 26.10.2017
+================================================
+Added	:	General Tweaks
+Version 2.1.5 - Updated: 12.10.2017
+================================================
+Added	:	General Tweaks
+version 2.1.4 - Updated: 28.02.2017
+================================================
+Updated	:	Theme improvements
+
+version 2.1.3 - Updated: 29.12.2016
+================================================
+Added 	: 	FW option to open socials in new tab
+Added 	:	Flickr social
+
+version 2.1.2 - Updated: 19.08.2016
+================================================
+Fixed	:	Class check
+
+version 2.1.1 - Updated: 11.08.2016
+================================================
+Fixed	:	Featured image on multisite
+
+Version 2.1 - Updated: 27.04.2016
+================================================
+Updated	:	Tesla Plugin Update
+
+Version 2.0.9 - Updated: 07.03.2016
+================================================
+Fixed  : tt_event_coundown shortcode fix
+
+Version 2.0.8 - Updated: 26.02.2016
+================================================
+Update  : Added events param to tt_events shortcode
+
+Version 2.0.7 - Updated: 02.02.2016
+================================================
+Update  : Added category filter to tt_events shortcode
+
+Version 2.0.6 - Updated: 28.01.2016
+================================================
+Update  : Demo Content Update
+
+Version 2.0.5 - Updated: 22.01.2016
+================================================
+Fixed	: Vimeo social
+Fixed	: extra padding below the home countdown
+Added 	: Speaker's Linkedin social
+
+
+Version 2.0.4 - Updated: 14.01.2016
+================================================
+Update	: Test Room Update
+
+Version 2.0.3 - Updated: 13.01.2016
+================================================
+Fixed	: Responsive fixes
+
+Version 2.0.2 - Updated: 21.12.2015
+================================================
+Fixed	: TGMPA Update
+
+Version 2.0.1 - Updated: 15.12.2015
+================================================
+Fixed	: tt_schedule shortcode fix
+
+Version 2.0.0 - Updated: 04.12.2015
+================================================
+Fixed	: Form submit issues
+
+Version 1.1.9 - Updated: 05.11.2015
+================================================
+Added	: Added standart time format
+
+Version 1.1.8 - Updated: 05.11.2015
+================================================
+Added	: Added permalinks to schedule shortcode
+
+Version 1.1.7 - Updated: 27.10.2015
+================================================
+Added	: Tickera Plugin
+
+Version 1.1.6 - Updated: 21.10.2015
+================================================
+Added	: Form style for RSVP
+
+Version 1.1.5 - Updated: 20.10.2015
+================================================
+Fixed	: Header top bar fix
+
+Version 1.1.4 - Updated: 09.10.2015
+================================================
+Improve	: Shortcodes speakers (added 2 types)
+Improve	: Added 2 footer styles
+Improve	: Added countdown with slides
+Improve	: CSS improvements
+
+Version 1.1.3 - Updated: 15.09.2015
+================================================
+Fixed 	: Sticky header
+
+Version 1.1.2 - Updated: 03.09.2015
+================================================
+Improve	: Theme improvements
+
+Version 1.1.1 - Updated: 14.08.2015
+================================================
+Improve	: Shortcodes sorting option
+
+Version 1.1.0 - Updated: 07.07.2015
+================================================
+Fixed :	Documentation fixes
+
+Version 1.0.9 - Updated: 01.07.2015
+================================================
+Fixed : Localization
+
+Version 1.0.8 - Updated: 29.06.2015
+================================================
+Fixed : Events filters display
+
+Version 1.0.7 - Updated: 23.06.2015
+================================================
+Fixed : Date Format Display
+
+Version 1.0.6 - Updated: 22.06.2015
+================================================
+Improve	: Form Builder Update for Event Tickets
+
+Version 1.0.5 - Updated: 11.06.2015
+================================================
+Improve	: Added speaker url option
+
+Version 1.0.4 - Updated: 10.06.2015
+================================================
+Fixed :	Fixed tt_event_countdown shortcode
+Improve	: Added instagram social icon
+
+Version 1.0.3 - Updated: 04.06.2015
+================================================
+Fixed :	Speaker social links fix
+
+Version 1.0.2 - Updated: 02.06.2015
+================================================
+Fixed :	Fixed tt_countdown shortcode
+
+Version 1.0.1 - Updated: 01.06.2015
+================================================
+Fixed :	Switching theme errors fix
+
+Version 1.0.0 - Initial Release: 15.05.2015
+================================================
