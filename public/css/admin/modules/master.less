@@ -1,0 +1,170 @@
+@import 'modules/vars';
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: @color-body;
+    font-family: @font-Roboto;
+    .text-black {
+        color: #777 !important;
+    }
+    .navbar{        
+        &.nav-top {
+            height: 100px;
+            box-shadow: 0px 0px 7px 1px #343435;
+            -webkit-transition: height 0.2s;
+            /* Safari */
+            transition: height 0.2s;
+    
+            .navbar-brand {
+                color: #777;
+    
+                .logo-ohfit {
+                    width: 100px;
+                    -webkit-transition: width 0.2s;
+                    /* Safari */
+                    transition: width 0.2s;
+                }
+            }
+    
+            &.fixed-menu {
+                height: 60px;
+    
+                .logo-ohfit {
+                    width: 60px;
+                }            
+            }
+        }
+    }
+    
+
+    #main {
+        height: auto;
+        padding-top: 100px;
+        margin-left: 44px;
+        -webkit-transition: padding-top 0.2s;
+        /* Safari */
+        transition: padding-top 0.2s;
+        clear: both;
+        &:after{
+            clear: both; 
+            content: "";
+            display: table; 
+        }
+
+        @media @media-laptop {
+            margin-left: 197px;
+        }
+
+        &.fixed-menu {
+            .aside {
+                margin-top: -40px !important;
+            }
+
+            .content {
+                .options-menu {
+                    position: relative;
+
+                    @media @media-laptop {
+                        position: fixed;
+                        top: 0px;
+                        z-index: 1030;
+                        margin: 0px;
+                        margin-top: 10px;
+                    }
+                }
+                @media @media-laptop {
+                    padding-top: 60px;
+                }
+            }
+        }
+
+        &.sidebar-toggled {
+            margin-left: 0px;
+
+            @media @media-laptop {
+                margin-left: 50px;
+
+                &.fixed-menu {
+                    .content {
+                        .options-menu {
+                            margin-left: 137px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .aside {
+            float: left;
+            height: 100vh;
+            width: 44px;
+            background-color: @color-aside;
+            margin: 0px 0px 0px -44px;
+            position: fixed;
+            overflow: hidden;
+
+            @media @media-laptop {
+                width: 197px;
+                margin: 0px 0px 0px -197px;
+            }
+            .nav-item {
+                overflow: hidden;
+                width: 210px;
+                &.active{
+                    background-color: black;
+                }
+            }
+            .navbar-link{
+                width: 210px;
+            }
+            .aside-item {
+                display: inline-block;
+                padding-left: 10px;
+            }
+
+            &.toggled {
+                width: 0px;
+                margin: 0px 0px 0px 0px;
+                display: none;
+
+                @media @media-laptop {
+                    width: 50px;
+                    margin: 0px 0px 0px -50px;
+                    display: block;
+                }
+
+                .aside-item {
+                    display: none;
+                }
+            }
+        }
+
+        .content {
+            float: left;
+            width: 100%;
+            min-width: 270px;
+            padding: 20px 20px 0px 20px;
+            background-color: @color-content;
+            min-height: 77vh;
+
+            .options-menu {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .item-img {
+                //max-width: 100px !Important;
+            }
+        }
+
+        .error-message {
+            color: #bd2417;
+        }
+    }
+
+    #footer{
+        height: 100px;
+        width: 100%;
+    }
+}
