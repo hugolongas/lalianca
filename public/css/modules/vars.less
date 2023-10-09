@@ -94,7 +94,19 @@ html body {
     }
 }
 
+.activitats-calendar {
+    display: none;
+
+    @media @media-laptop {
+        width: 340px;
+        display: table-cell;
+    }
+}
+
 .vanilla-calendar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 80px;
     .vanilla-calendar-days_selecting {
         .vanilla-calendar-day__btn {
             cursor: default;
@@ -146,4 +158,55 @@ html body {
         color: #fff
     } 
 
+}
+
+
+.activitat-item {
+    position: relative;
+    background: #fDfDfD;
+    margin-bottom: 20px;
+
+    a {
+        color: #000;
+        display: block;
+        text-align: left;
+        text-decoration: none;
+    }
+
+    .activitat-poster {
+        display: table-cell;
+
+        img {
+            max-width: 250px;
+        }
+    }
+
+    .activitat-info {
+        display: table-cell;
+        vertical-align: top;
+        padding-top: 10px;
+        padding-left: 20px;
+
+        .activitat-title {
+            font-family: 'Montserrat';
+            font-size: 25px;
+            font-weight: 500;
+        }
+
+        .activitat-date {
+            font-size: 15px;
+
+            .sub-title {
+                color: #292929;
+            }
+        }
+
+        .activitat-preu {
+            font-size: 15px;        }
+
+        .activitat-resum {
+            font-size: 16px;
+            margin-top: 15px;
+        }
+    }
 }

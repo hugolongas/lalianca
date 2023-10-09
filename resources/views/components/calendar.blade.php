@@ -20,11 +20,11 @@
                 actions: {
                     clickDay(e, dates) {
                         var data = dates[0];
-                        if (e.currentTarget.classList.contains("calendar_activity")) {
+                        if (e.target.classList.contains("calendar_activity")) {
                             var url = "{{ URL::to('activitats') }}?date=" + data
                             window.location.href = url;
                         }
-                        e.preventDefault;
+                        //e.preventDefault;
                         var month = new Date(data).getMonth();
                         var year = new Date(data).getFullYear();
                         _SetCalendarActivities(year, month);

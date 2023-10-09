@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/', ['uses' => 'AdminController@Index', 'as' => 'admin.home']);   
+    Route::get('/portada',['uses'=>'CoverController@Index','as'=>'admin.portada']);
+    Route::get('/portada/editar/{cover}', ['uses' => 'CoverController@Edit', 'as' => 'admin.portada.edit']);
+    Route::put('/portada/editar/{cover}', ['uses' => 'CoverController@Update', 'as' => 'admin.portada.update']);
+
     Route::get('/activitats',['uses'=>'ActivitatController@adminIndex','as'=>'admin.activitats']);
     Route::get('/activitats/crear',['uses'=>'ActivitatController@create','as'=>'admin.activitats.create']);
     Route::post('/activitats/guardar', ['uses' => 'ActivitatController@Store', 'as' => 'admin.activitats.store']);    
