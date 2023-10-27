@@ -20,6 +20,13 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/portada/editar/{cover}', ['uses' => 'CoverController@Edit', 'as' => 'admin.portada.edit']);
     Route::put('/portada/editar/{cover}', ['uses' => 'CoverController@Update', 'as' => 'admin.portada.update']);
 
+    Route::get('/categories',['uses'=>'CategoryController@adminIndex','as'=>'admin.categories']);
+    Route::get('/categories/crear',['uses'=>'CategoryController@create','as'=>'admin.categories.create']);
+    Route::post('/categories/guardar', ['uses' => 'CategoryController@Store', 'as' => 'admin.categories.store']);    
+    Route::get('/categories/editar/{category}', ['uses' => 'CategoryController@Edit', 'as' => 'admin.categories.edit']);
+    Route::put('/categories/editar/{category}', ['uses' => 'CategoryController@Update', 'as' => 'admin.categories.update']);
+    Route::post('/categories/eliminar/{id}', ['uses' => 'CategoryController@Delete', 'as' => 'admin.categories.delete']);
+
     Route::get('/activitats',['uses'=>'ActivitatController@adminIndex','as'=>'admin.activitats']);
     Route::get('/activitats/crear',['uses'=>'ActivitatController@create','as'=>'admin.activitats.create']);
     Route::post('/activitats/guardar', ['uses' => 'ActivitatController@Store', 'as' => 'admin.activitats.store']);    

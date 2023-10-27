@@ -65,7 +65,6 @@
     </form>
 @stop
 @push('scripts')
-
     <script type="text/javascript">
         // Start upload preview image
         var imagePosterFile = document.getElementById('imagePosterFile');
@@ -80,9 +79,9 @@
             reader.onload = function(event) {
                 var img = new Image();
                 img.onload = function() {
-                    canvasPoster.width = 1110;
-                    canvasPoster.height = 375;
-                    ctxPoster.drawImage(img, 0, 0, 1110, 375);
+                    canvasPoster.width = 100;
+                    canvasPoster.height = {{$height}};
+                    ctxPoster.drawImage(img, 0, 0, canvasPoster.width, canvasPoster.height);
                     origImgPoster.style.display = "none";
                 }
                 img.src = event.target.result;

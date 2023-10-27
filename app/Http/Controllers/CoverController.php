@@ -58,8 +58,17 @@ class CoverController extends Controller
      */
     public function edit(Cover $cover)
     {
-        $imgW
-        return view('admin.portada.edit')->with('cover', $cover);
+        $height=375;
+        $width=1100;
+        if($cover->id>1)
+        {
+            $width=1100/2;
+            $height = 250;
+            
+        }
+        
+
+        return view('admin.portada.edit')->with('cover', $cover)->with('height',$height)->with('width',$width);
     }
 
     /**
