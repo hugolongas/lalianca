@@ -13,8 +13,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes();
+Auth::routes(['register' => false]);
+
 Route::group(['middleware' => ['auth']], function () {
+
+    Route::group(['middleware'=>'role:admin'], function() {
+        Route::get('/usuaris',['uses'=>'UsersController@index','as'=>'admin.users']);
+        Route::get('/usuaris/crear',['uses'=>'UsersController@create','as'=>'admin.users.create']);
+        Route::post('/usuaris/guardar', ['uses' => 'UsersController@Store', 'as' => 'admin.users.store']);    
+        Route::get('/usuaris/editar/{category}', ['uses' => 'UsersController@Edit', 'as' => 'admin.users.edit']);
+        Route::put('/usuaris/editar/{category}', ['uses' => 'UsersController@Update', 'as' => 'admin.users.update']);
+        Route::post('/usuaris/eliminar/{id}', ['uses' => 'UsersController@Delete', 'as' => 'admin.users.delete']);        
+    });
+
     Route::get('/', ['uses' => 'AdminController@Index', 'as' => 'admin.home']);   
     Route::get('/portada',['uses'=>'CoverController@Index','as'=>'admin.portada']);
     Route::get('/portada/editar/{cover}', ['uses' => 'CoverController@Edit', 'as' => 'admin.portada.edit']);
@@ -35,5 +46,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/activitats/eliminar/{id}', ['uses' => 'ActivitatController@Delete', 'as' => 'admin.activitats.delete']);
     Route::post('/activitats/publish/{id}',['uses'=>'ActivitatController@Publish','as'=>'admin.activitats.publish']);
     Route::post('/activitats/unpublish/{id}',['uses'=>'ActivitatController@UnPublish','as'=>'admin.activitats.unpublish']);
+
+
 });
 Route::get('/clear/cache', 'AdminController@clearCache');

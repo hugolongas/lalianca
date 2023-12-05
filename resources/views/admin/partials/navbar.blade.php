@@ -21,6 +21,13 @@
                     </button>
                 </form>
             </div>
+            <div class="dropdown-item">
+                <li class="nav-item {{ Request::routeIs('admin.users') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('admin.users') }}">
+                        <div class="aside-item">Usuaris</div>
+                    </a>
+                </li>     
+            </div>
         </div>
       </li>
     </ul>    
