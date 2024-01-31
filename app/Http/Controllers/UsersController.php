@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Role;
 
 use Yajra\Datatables\Datatables;
 
@@ -29,17 +30,28 @@ class UsersController extends Controller
 
     public function create()
     {
-        return view('admin.users.create');
+        $roles = Role::all();
+        return view('admin.users.create')->with("roles",$roles);
     }
 
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'userName' => 'required',
+            'name' => 'required',
+            'email' => 'required',            
         ]);
         $name = $request->name;
         $password = $request->password;
         $email = $request->email;
+        if($password==null){
+            $include_chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            $charLength = strlen($include_chars);
+            $password = '';
+            for ($i = 0; $i < 8; $i++) {
+                $password .= $include_chars [rand(0, $charLength - 1)];
+            }           
+        }
+        
         $encryptPassword = Hash::make($password);
 
         $user = new User();
